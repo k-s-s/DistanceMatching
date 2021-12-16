@@ -18,12 +18,13 @@ void UAnimMod_DistanceCurve::OnApply_Implementation(UAnimSequence* AnimationSequ
 		return;
 	}
 
-	const bool bCurveExists = UAnimationBlueprintLibrary::DoesCurveExist(AnimationSequence, CurveName, ERawCurveTrackTypes::RCT_Float);
-
-	if (bCurveExists)
-	{
-		UAnimationBlueprintLibrary::RemoveCurve(AnimationSequence, CurveName, false);
-	}
+	// const bool bCurveExists = UAnimationBlueprintLibrary::DoesCurveExist(AnimationSequence, CurveName, ERawCurveTrackTypes::RCT_Float);
+	//
+	// if (bCurveExists)
+	// {
+	// 	UAnimationBlueprintLibrary::RemoveCurve(AnimationSequence, CurveName, false);
+	// }
+	UAnimationBlueprintLibrary::RemoveCurve(AnimationSequence, CurveName, false);
 	UAnimationBlueprintLibrary::AddCurve(AnimationSequence, CurveName, ERawCurveTrackTypes::RCT_Float, false);
 
 	int32 NumFrames;

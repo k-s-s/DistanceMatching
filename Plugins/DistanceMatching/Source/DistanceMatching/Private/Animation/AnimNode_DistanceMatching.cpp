@@ -29,7 +29,7 @@ FAnimNode_DistanceMatching::FAnimNode_DistanceMatching()
 {
 }
 
-float FAnimNode_DistanceMatching::GetCurrentAssetLength()
+float FAnimNode_DistanceMatching::GetCurrentAssetLength() const
 {
 	return Sequence ? Sequence->GetPlayLength() : 0.0f;
 }

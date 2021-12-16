@@ -9,7 +9,7 @@ public class DistanceMatchingEditor : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new [] { "Core" });
+		PublicDependencyModuleNames.AddRange(new [] { "Core", });
 		PrivateDependencyModuleNames.AddRange(
 			new []
 			{
@@ -21,7 +21,8 @@ public class DistanceMatchingEditor : ModuleRules
 				"AnimationModifiers",
 				"DistanceMatching",
 				"UnrealEd",
-				"BlueprintGraph"
+				"BlueprintGraph",
+				"AnimationBlueprintLibrary"
 			}
 		);
 	}

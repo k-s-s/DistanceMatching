@@ -96,10 +96,10 @@ void UAnimGraphNode_DistanceMatching::PreloadRequiredAssets()
 void UAnimGraphNode_DistanceMatching::BakeDataDuringCompilation(FCompilerResultsLog& MessageLog)
 {
 	UAnimBlueprint* AnimBlueprint = GetAnimBlueprint();
-	AnimBlueprint->FindOrAddGroup(SyncGroup.GroupName);
-	Node.GroupName = SyncGroup.GroupName;
-	Node.GroupRole = SyncGroup.GroupRole;
-	Node.Method = SyncGroup.Method;
+	AnimBlueprint->FindOrAddGroup(Node.GetGroupName());
+	// Node.GroupName = SyncGroup.GroupName;
+	// Node.GroupRole = SyncGroup.GroupRole;
+	// Node.Method = SyncGroup.Method;
 }
 
 UAnimationAsset* UAnimGraphNode_DistanceMatching::GetAnimationAsset() const

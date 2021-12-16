@@ -16,9 +16,9 @@ struct DISTANCEMATCHING_API FAnimNode_DistanceMatching : public FAnimNode_AssetP
 	FAnimNode_DistanceMatching();
 
 	// FAnimNode_AssetPlayerBase interface
-	virtual float GetCurrentAssetTime() override { return InternalTimeAccumulator; }
-	virtual float GetCurrentAssetLength() override;
-	virtual UAnimationAsset* GetAnimAsset() override { return Sequence; }
+	virtual float GetCurrentAssetTime() const override { return InternalTimeAccumulator; }
+	virtual float GetCurrentAssetLength() const override;
+	virtual UAnimationAsset* GetAnimAsset() const override { return Sequence; }
 	// End of FAnimNode_AssetPlayerBase interface
 
 	// FAnimNode_Base interface
